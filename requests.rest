@@ -1,0 +1,47 @@
+
+### get all tutorials
+GET http://localhost:3001/api/tutorials
+
+
+### get a tutorial by id
+GET http://localhost:3001/api/tutorials/5f5383c6b53bc02db044af40
+
+
+### get tutorial with title regex
+GET http://localhost:3001/api/tutorials?title=jest
+
+
+### get tutorial that are published
+GET http://localhost:3001/api/tutorials/published
+
+### update a tutorial by id
+PUT http://localhost:3001/api/tutorials/5f538de64676335ac09160ef
+Content-Type: application/json
+
+{
+   "published": true
+}
+
+
+### post a new tutorial
+POST http://localhost:3001/api/tutorials
+Content-Type: application/json
+
+{
+    "subject": "C#",
+    "title": "Loops in C#",
+    "content": "abcdefghijklmnopqrstuvwxyz",
+    "date": null,
+    "author": "Christiano Ronaldo",
+    "rating": 6.6,
+    "published": false
+}
+
+
+### delete all the tutorials in the data base
+DELETE http://localhost:3001/api/tutorials
+
+
+### delete one tutorial by id
+DELETE http://localhost:3001/api/tutorials/5f5383c6b53bc02db044af40
+ 
